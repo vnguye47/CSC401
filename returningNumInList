@@ -1,0 +1,58 @@
+
+numbers = [] 
+numbers = eval(input('Enter a list of numbers: '))
+
+def search_for_higher_number(i,numbers):
+    'this function takes a number and a list and then returns how many numbers are higher than the input number insert number and list'
+    count = 0    
+    for n in numbers:
+        if n > i:
+            count = count +1 
+    return count 
+               
+        
+def list_first_numbers(i,numbers):
+    'this function will accept two arguements, a number and will show that many number on the list user must pick a number to put in'
+    lst = []
+    for n in range(i):
+        lst.append(numbers[n])
+    return lst
+
+
+def count_evens(numbers):
+    'this function returns the number of even number in list'
+    count = 0
+    for n in numbers:
+        if n % 2 ==0:
+            count = count +1
+    return count
+
+
+def count_odds(numbers):
+    'this function returns how many odd numbers are on list'
+    count = 0
+    for n in numbers:
+        if n % 2 ==1:
+            count = count +1
+    return count
+
+
+def odd_even(numbers):
+    'this function returns the number of even or odd number in list'
+    print("Welcome!")
+    insert=int(input("Would you like to count the even numbers (type 1), or count the odd numbers (type 2)? "))
+    count = 0
+    for n in numbers:
+        if insert == 1 and n % 2 ==0:
+            count = count +1
+        if insert ==2 and n % 2 ==1:
+            count = count +1
+    print(count)
+
+def find_doubles(numbers):
+    'this function returns the values that are double in the list'
+    lst_of_doubles = []
+    for i in range(1,len(lst)):
+        if lst[i] == lst[i-1]*2: #if the second index is the same as double the first index
+            lst_of_doubles.append(lst[i])
+    return lst_of_doubles
